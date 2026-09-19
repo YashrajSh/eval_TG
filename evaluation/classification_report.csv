@@ -1,0 +1,5 @@
+class,precision,recall,f1,support
+true,0.3333,1.0000,0.5000,4
+false,0.0000,0.0000,0.0000,4
+misleading,0.0000,0.0000,0.0000,4
+unverifiable,1.0000,0.3333,0.5000,3

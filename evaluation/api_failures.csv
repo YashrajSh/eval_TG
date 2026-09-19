@@ -1,0 +1,3 @@
+id,input,ground_truth,predicted,confidence,credibility_score,latency_ms,evidence_nodes,graph_nodes,graph_edges,supporting_sources,contradicting_sources,correct,error
+U04,A secret government report proves time travel is real.,unverifiable,unverifiable,0,0,8794.47,0,0,0,0,0,True,"Groq Llama request failed after 3 attempts: Client error '429 Too Many Requests' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"

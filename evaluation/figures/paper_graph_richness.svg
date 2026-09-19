@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="430" viewBox="0 0 820 430">
+<rect width="100%" height="100%" fill="white"/>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#202124;font-size:13px}
+.title{font-size:20px;font-weight:700}
+.label{font-size:12px}
+.value{font-size:16px;font-weight:700}
+</style>
+<text class="title" x="30" y="36">Evidence Graph Richness</text>
+<line x1="105" y1="355.0" x2="730" y2="355.0" stroke="#dadce0"/>
+<text class="label" x="93" y="359.0" text-anchor="end">0</text>
+<line x1="105" y1="316.4864864864865" x2="730" y2="316.4864864864865" stroke="#dadce0"/>
+<text class="label" x="93" y="320.4864864864865" text-anchor="end">1</text>
+<line x1="105" y1="277.97297297297297" x2="730" y2="277.97297297297297" stroke="#dadce0"/>
+<text class="label" x="93" y="281.97297297297297" text-anchor="end">2</text>
+<line x1="105" y1="239.45945945945948" x2="730" y2="239.45945945945948" stroke="#dadce0"/>
+<text class="label" x="93" y="243.45945945945948" text-anchor="end">3</text>
+<line x1="105" y1="200.94594594594597" x2="730" y2="200.94594594594597" stroke="#dadce0"/>
+<text class="label" x="93" y="204.94594594594597" text-anchor="end">4</text>
+<line x1="105" y1="162.43243243243245" x2="730" y2="162.43243243243245" stroke="#dadce0"/>
+<text class="label" x="93" y="166.43243243243245" text-anchor="end">5</text>
+<line x1="105" y1="123.91891891891893" x2="730" y2="123.91891891891893" stroke="#dadce0"/>
+<text class="label" x="93" y="127.91891891891893" text-anchor="end">6</text>
+<line x1="105" y1="85.40540540540542" x2="730" y2="85.40540540540542" stroke="#dadce0"/>
+<text class="label" x="93" y="89.40540540540542" text-anchor="end">7</text>
+<rect x="105" y="149.5945945945946" width="130" height="205.4054054054054" fill="#2e7d32"/>
+<text class="value" x="170.0" y="141.5945945945946" text-anchor="middle">5.33</text>
+<text x="170.0" y="385" text-anchor="middle">Evidence nodes</text>
+<rect x="305" y="108.51351351351352" width="130" height="246.48648648648648" fill="#2e7d32"/>
+<text class="value" x="370.0" y="100.51351351351352" text-anchor="middle">6.40</text>
+<text x="370.0" y="385" text-anchor="middle">Graph nodes</text>
+<rect x="505" y="118.78378378378378" width="130" height="236.21621621621622" fill="#2e7d32"/>
+<text class="value" x="570.0" y="110.78378378378378" text-anchor="middle">6.13</text>
+<text x="570.0" y="385" text-anchor="middle">Graph edges</text>
+<rect x="705" y="221.48648648648648" width="130" height="133.51351351351352" fill="#2e7d32"/>
+<text class="value" x="770.0" y="213.48648648648648" text-anchor="middle">3.47</text>
+<text x="770.0" y="385" text-anchor="middle">Supporting sources</text>
+<rect x="905" y="339.5945945945946" width="130" height="15.405405405405405" fill="#2e7d32"/>
+<text class="value" x="970.0" y="331.5945945945946" text-anchor="middle">0.40</text>
+<text x="970.0" y="385" text-anchor="middle">Contradicting sources</text>
+</svg>

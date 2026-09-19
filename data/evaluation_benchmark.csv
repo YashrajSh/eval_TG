@@ -1,0 +1,17 @@
+id,input,type,ground_truth,topic
+T01,NASA landed Apollo 11 on the Moon in 1969.,text,true,history
+T02,The Earth orbits the Sun.,text,true,science
+T03,Water boils at 100 degrees Celsius at standard atmospheric pressure.,text,true,science
+T04,The World Health Organization declared COVID-19 a pandemic in March 2020.,text,true,health
+F01,Vaccines contain microchips.,text,false,health
+F02,The Earth is flat.,text,false,science
+F03,Humans can breathe normally in outer space without a suit.,text,false,science
+F04,The Great Wall of China is visible from the Moon with the naked eye.,text,false,history
+M01,Coffee is bad for heart health.,text,misleading,health
+M02,All processed foods are toxic.,text,misleading,health
+M03,Electric cars produce zero emissions.,text,misleading,climate
+M04,AI always gives correct answers.,text,misleading,technology
+U01,A private company secretly found alien life yesterday.,text,unverifiable,unknown
+U02,An unnamed source confirmed that a hidden cure for all cancers exists.,text,unverifiable,health
+U03,A celebrity privately decided to retire next month.,text,unverifiable,entertainment
+U04,A secret government report proves time travel is real.,text,unverifiable,unknown
