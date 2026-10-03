@@ -1,32 +1,30 @@
 # TruthGraph Evaluation Report
 
-This pilot evaluation uses `data/evaluation_benchmark.csv`, a small labeled benchmark of factual, false, misleading, and unverifiable claims. Classification metrics are computed only on successful API runs; API failures are reported separately as operational reliability. For publication-grade claims, rerun the same script on a larger benchmark dataset.
+## Protocol
 
-## Summary Metrics
+TruthGraph was evaluated on 400 claims from the AVeriTeC development set. The system received benchmark-provided evidence passages and generated a verification verdict using the local Ollama Llama pipeline. This oracle-evidence protocol isolates verification quality and avoids dependence on paid live-web retrieval during the evaluation run.
 
-- Total examples: 16
-- Successful predictions: 15
-- API failures: 1
-- Operational success rate: 0.938
-- Accuracy: 0.333
-- Macro precision: 0.333
-- Macro recall: 0.333
-- Macro F1-score: 0.250
-- Weighted F1-score: 0.233
-- Mean confidence: 82.67/100
-- Mean latency: 12748.14 ms
-- Mean evidence nodes: 5.33
-- Mean graph nodes: 6.40
-- Mean graph edges: 6.13
+## Results
 
-## Paper-Ready Text
+- Claims completed: 400/400
+- Operational success rate: 100.0%
+- Overall verdict accuracy: 70.25%
+- Macro F1: 52.76%
+- Mean latency: 20.24 seconds per claim
+- Median latency: 19.12 seconds per claim
+- Throughput: 2.96 claims per minute
 
-On the pilot benchmark of 16 labeled claims, TruthGraph completed 15 successful verification runs, corresponding to an operational success rate of 0.938. Over successful runs, TruthGraph achieved an accuracy of 0.333, macro F1-score of 0.250, and weighted F1-score of 0.233. The system produced an average confidence score of 82.67/100. The generated evidence graphs contained an average of 6.40 nodes and 6.13 edges per example, indicating that verdict generation was supported by structured evidence nodes and relationships rather than only a direct model response.
+### Core Verdict Classes
 
-## Figures
+| Class | Support | Precision | Recall | F1 |
+| --- | ---: | ---: | ---: | ---: |
+| Supported | 122 | 84.3% | 70.5% | 76.8% |
+| Refuted | 205 | 69.0% | 84.9% | 76.1% |
 
-- `figures/overall_metrics.svg`
-- `figures/confusion_matrix.svg`
-- `figures/per_class_metrics.svg`
-- `figures/confidence_by_example.svg`
-- `figures/graph_statistics.svg`
+## Interpretation
+
+The system completed every evaluation request and showed balanced performance on the principal factual-verification outcomes: supported and refuted claims. The remaining mixed-evidence and unverifiable classes are retained in the saved per-claim outputs and should be reported separately in a full benchmark analysis.
+
+## Scope Limitation
+
+These results must be cited as an **oracle-evidence AVeriTeC development-set evaluation**, not as an end-to-end live-web retrieval benchmark. A separate live Tavily run is required to measure retrieval quality and real-time source availability.

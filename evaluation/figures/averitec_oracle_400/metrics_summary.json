@@ -1,0 +1,7 @@
+{
+  "claims": 400,
+  "operational_success_rate": 1.0,
+  "accuracy": 0.7025,
+  "macro_f1": 0.5275894415185125,
+  "mean_latency_seconds": 20.244375
+}

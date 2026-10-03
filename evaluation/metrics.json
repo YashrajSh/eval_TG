@@ -1,81 +1,16 @@
 {
-  "total_examples": 16,
-  "successful_examples": 15,
-  "failed_examples": 1,
-  "operational_success_rate": 0.9375,
-  "n": 15,
-  "accuracy": 0.3333333333333333,
-  "macro_precision": 0.3333333333333333,
-  "macro_recall": 0.3333333333333333,
-  "macro_f1": 0.25,
-  "weighted_f1": 0.23333333333333334,
+  "evaluation_protocol": "AVeriTeC development set with benchmark-provided oracle evidence and local Ollama inference",
+  "claims": 400,
+  "operational_success_rate": 1.0,
+  "overall_verdict_accuracy": 0.7025,
+  "macro_f1": 0.5275894415185125,
+  "mean_latency_seconds": 20.244375,
+  "median_latency_seconds": 19.12,
+  "throughput_claims_per_minute": 2.963789843527636,
   "per_class": {
-    "true": {
-      "precision": 0.3333333333333333,
-      "recall": 1.0,
-      "f1": 0.5,
-      "support": 4
-    },
-    "false": {
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
-      "support": 4
-    },
-    "misleading": {
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0.0,
-      "support": 4
-    },
-    "unverifiable": {
-      "precision": 1.0,
-      "recall": 0.3333333333333333,
-      "f1": 0.5,
-      "support": 3
-    }
-  },
-  "confusion_matrix": {
-    "true": {
-      "true": 4,
-      "false": 0,
-      "misleading": 0,
-      "unverifiable": 0
-    },
-    "false": {
-      "true": 4,
-      "false": 0,
-      "misleading": 0,
-      "unverifiable": 0
-    },
-    "misleading": {
-      "true": 3,
-      "false": 1,
-      "misleading": 0,
-      "unverifiable": 0
-    },
-    "unverifiable": {
-      "true": 1,
-      "false": 0,
-      "misleading": 1,
-      "unverifiable": 1
-    }
-  },
-  "mean_confidence": 82.66666666666667,
-  "mean_latency_ms": 12748.143333333333,
-  "mean_evidence_nodes": 5.333333333333333,
-  "mean_graph_nodes": 6.4,
-  "mean_graph_edges": 6.133333333333334,
-  "ground_truth_distribution": {
-    "true": 4,
-    "false": 4,
-    "misleading": 4,
-    "unverifiable": 3
-  },
-  "prediction_distribution": {
-    "true": 12,
-    "false": 1,
-    "misleading": 1,
-    "unverifiable": 1
+    "supported": {"support": 122, "precision": 0.8431372549, "recall": 0.7049180328, "f1": 0.7678571429},
+    "refuted": {"support": 205, "precision": 0.6904761905, "recall": 0.8487804878, "f1": 0.7614879650},
+    "misleading": {"support": 38, "precision": 1.0, "recall": 0.0526315789, "f1": 0.1},
+    "unverifiable": {"support": 35, "precision": 0.4318181818, "recall": 0.5428571429, "f1": 0.4810126582}
   }
 }

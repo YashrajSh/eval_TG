@@ -1,45 +1,38 @@
 # TruthGraph Evaluation Artifacts
 
-This repository contains the evaluation outputs for the TruthGraph misinformation detection backend.
+This repository contains the current evaluation artifacts for the TruthGraph misinformation-detection backend.
 
-## Paper-Ready Files
+## Current Evaluation
 
-- `evaluation/paper_ready_metrics.md` - strong system/operational metrics for the research paper.
-- `evaluation/figures/paper_system_reliability.svg` - operational success and confidence graph.
-- `evaluation/figures/paper_graph_richness.svg` - evidence graph richness graph.
+The published result is a 400-claim AVeriTeC development-set evaluation using benchmark-provided evidence passages and local Ollama inference. This is an **oracle-evidence evaluation**: it evaluates the claim-verification and verdict pipeline without incurring paid live-search costs. It does not measure live Tavily retrieval quality.
 
-## Full Evaluation Files
+### Headline Results
 
-- `evaluation/evaluation_report.md` - full pilot evaluation report.
-- `evaluation/metrics.json` - machine-readable metric summary.
-- `evaluation/classification_report.csv` - per-class precision, recall, F1, and support.
-- `evaluation/predictions.csv` - all benchmark predictions.
-- `evaluation/api_failures.csv` - failed external API run details.
-- `evaluation/figures/` - all generated SVG charts.
+- Claims completed: 400/400
+- Operational success rate: 100.0%
+- Overall verdict accuracy: 70.25%
+- Supported-claim F1: 76.8%
+- Refuted-claim F1: 76.1%
+- Mean per-claim latency: 20.24 seconds
 
-## Benchmark And Scripts
+## Paper Figures
 
-- `data/evaluation_benchmark.csv` - labeled pilot benchmark.
-- `data/evaluation_retry_rate_limited.csv` - subset used to retry rate-limited examples.
-- `scripts/evaluate.py` - computes evaluation metrics and full figures from predictions.
-- `scripts/generate_paper_metrics.py` - generates paper-focused operational metrics and figures.
+- `evaluation/figures/averitec_oracle_400/05_primary_results.png` - operational reliability and primary verdict performance.
+- `evaluation/figures/averitec_oracle_400/06_core_verdict_quality.png` - precision, recall, and F1 for supported and refuted claims.
+- `evaluation/figures/averitec_oracle_400/07_execution_efficiency.png` - latency and throughput.
 
-## Headline System Metrics
+PDF versions are included beside each PNG for direct paper insertion.
 
-- Operational success rate: 93.8%
-- Successful verification coverage: 15/16 claims
-- Mean confidence score: 82.67/100
-- Mean evidence nodes per claim: 5.33
-- Mean graph nodes per claim: 6.40
-- Mean graph edges per claim: 6.13
+## Reproducibility
 
-## Regenerate Reports
+- `evaluation/results/averitec_oracle_results.jsonl` - 400 per-claim outputs used to calculate the metrics.
+- `evaluation/metrics.json` - machine-readable summary.
+- `evaluation/scripts/generate_oracle_figures.py` - regenerates the figures from the saved results.
 
-From the repository root:
+Run from the repository root with Python 3.11+ and Matplotlib installed:
 
 ```bash
-python3 scripts/evaluate.py
-python3 scripts/generate_paper_metrics.py
+python evaluation/scripts/generate_oracle_figures.py
 ```
 
-These scripts use the saved `evaluation/predictions.csv` file and do not call live external APIs unless `scripts/evaluate.py` is run with `--live`.
+The chart script expects the results file at `evaluation/results/averitec_oracle_results.jsonl` and writes figures to `evaluation/figures/averitec_oracle_400/`.

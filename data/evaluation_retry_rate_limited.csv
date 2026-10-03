@@ -1,6 +1,0 @@
-id,input,type,ground_truth,topic
-F04,The Great Wall of China is visible from the Moon with the naked eye.,text,false,history
-M03,Electric cars produce zero emissions.,text,misleading,climate
-M04,AI always gives correct answers.,text,misleading,technology
-U02,An unnamed source confirmed that a hidden cure for all cancers exists.,text,unverifiable,health
-U04,A secret government report proves time travel is real.,text,unverifiable,unknown

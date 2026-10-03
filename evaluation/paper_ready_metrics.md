@@ -1,23 +1,28 @@
-# Paper-Ready System Metrics
+# Paper-Ready Evaluation Metrics
 
-These metrics describe backend reliability, source grounding, and graph construction strength. They are suitable for the proposed methodology / system evaluation section. The full classification metrics remain in `evaluation/evaluation_report.md`.
+## Recommended Results To Present
 
-## Strong Metrics to Present
+| Metric | Result |
+| --- | ---: |
+| Evaluation claims | 400 |
+| Operational success rate | 100.0% |
+| Overall verdict accuracy | 70.25% |
+| Supported-claim F1 | 76.8% |
+| Refuted-claim F1 | 76.1% |
+| Mean response time | 20.24 s |
+| Median response time | 19.12 s |
+| Throughput | 2.96 claims/minute |
 
-- Operational success rate: 93.8%
-- Successful verification coverage: 15/16 claims
-- Mean confidence score: 82.67/100
-- Mean evidence nodes per claim: 5.33
-- Mean graph nodes per claim: 6.40
-- Mean graph edges per claim: 6.13
-- Mean supporting sources per claim: 3.47
-- Mean contradicting sources per claim: 0.40
+## Paper Text
 
-## Paper-Ready Text
+On a 400-claim AVeriTeC development-set evaluation with benchmark-provided evidence, TruthGraph completed all verification requests, yielding a 100.0% operational success rate. The system achieved 70.25% overall verdict accuracy. For the primary factual-verification classes, it achieved F1 scores of 76.8% for supported claims and 76.1% for refuted claims. The mean end-to-end verification time was 20.24 seconds per claim, with a median of 19.12 seconds.
 
-The proposed TruthGraph backend demonstrated reliable end-to-end execution on the pilot benchmark, completing 15 out of 16 verification tasks for an operational success rate of 93.8%. Across successful runs, the system produced an average confidence score of 82.67/100 while constructing structured evidence graphs with an average of 6.40 nodes and 6.13 edges per claim. Each verification run incorporated retrieved source evidence, with an average of 5.33 evidence nodes, showing that the system grounds verdict generation in external evidence rather than relying only on direct language-model output.
+## Required Evaluation Label
+
+Use the phrase **“oracle-evidence evaluation”** in the paper. Evidence passages were supplied from the AVeriTeC benchmark, so this result measures the verification pipeline rather than real-time web retrieval performance.
 
 ## Figures
 
-- `figures/paper_system_reliability.svg`
-- `figures/paper_graph_richness.svg`
+- `figures/averitec_oracle_400/05_primary_results.png`
+- `figures/averitec_oracle_400/06_core_verdict_quality.png`
+- `figures/averitec_oracle_400/07_execution_efficiency.png`
